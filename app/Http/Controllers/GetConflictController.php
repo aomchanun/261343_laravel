@@ -15,9 +15,6 @@ class GetConflictController extends Controller
      */
     public function index()
     {
-        // Get the paginated diary entries with their associated emotions
-        $entries = Auth::user()->diaryEntries()->with('emotions')->paginate(3);
-        
         // Get the logged-in user ID
         $userId = Auth::id();
         
